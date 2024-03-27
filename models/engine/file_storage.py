@@ -57,7 +57,7 @@ class FileStorage:
             pass
 
     def delete(self, obj=None):
-        """Delete an object in the dictionary"""
+        """Delete an object in the dictionary   """
         try:
              self.__objects.pop(f"{obj.__class__.__name__}.{obj.id}")
         except IndexError():
