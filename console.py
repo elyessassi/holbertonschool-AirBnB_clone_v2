@@ -126,7 +126,7 @@ class HBNBCommand(cmd.Cmd):
         storage.save()
         if len(mylist) > 1:
             mydict = storage.all()
-            for i in (1, len(mylist) - 1):
+            for i in range(1, len(mylist)):
                 key_and_value = mylist[i].split("=")
                 if type(key_and_value[1]) == str:
                     key_and_value[1] = key_and_value[1].replace("_", " ")
