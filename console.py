@@ -124,16 +124,13 @@ class HBNBCommand(cmd.Cmd):
             return
         new_instance = HBNBCommand.classes[mylist[0]]()
         storage.save()
-        if len(args) > 1:
+        if len(mylist) > 1:
             mydict = storage.all()
             for i in (1, len(mylist) - 1):
-                print("----------------",mylist[i],"-------------")
                 key_and_value = mylist[i].split("=")
-                print("++++++++",key_and_value[0],"+++++++",key_and_value[1],"+++++++++++++++++++")
                 if type(key_and_value[1]) == str:
                     key_and_value[1] = key_and_value[1].replace("_", " ")
                     key_and_value[1] = key_and_value[1].strip('"')
-                    print("++++++++",key_and_value[0],"+++++++",key_and_value[1],"+++++++++++++++++++")
                 mydict[f"{new_instance.__class__.__name__}.{new_instance.id}"].__dict__.update({key_and_value[0]:key_and_value[1]})
         print(new_instance.id)
         storage.save()
