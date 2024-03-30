@@ -141,9 +141,7 @@ class HBNBCommand(cmd.Cmd):
                 if type(key_and_value[1]) == str:
                     key_and_value[1] = key_and_value[1].replace("_", " ")
                     key_and_value[1] = key_and_value[1].strip('"')
-                mydict[
-                    f"{new_instance.__class__.__name__}.{new_instance.id}"
-                ].__dict__.update({key_and_value[0]: key_and_value[1]})
+                mydict[f"{new_instance.__class__.__name__}.{new_instance.id}"].__dict__.update({key_and_value[0]: key_and_value[1]})
         print(new_instance.id)
         storage.save()
 
