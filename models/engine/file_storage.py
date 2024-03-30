@@ -19,7 +19,7 @@ class FileStorage:
 
     def delete(self, obj=None):
         """Delete an object in the dictionary"""
-        self.__objects.pop(f"{obj.__class__.__name__}.{obj.id}")
+        print("works")
 
 
     def all(self, cls=None):
