@@ -21,11 +21,11 @@ class FileStorage:
     def all(self, cls=None):
         """Returns a dictionary of models currently in storage"""
         if cls is None:
-            return FileStorage.__objects
+            return self.__objects
         else:
-            mydict = self.__objects.copy()
+            mydict = {}
             for key, value in self.__objects.items():
-                if value.__class__.__name__ == cls:
+                if value.__class__.__name__ == cls.__name__:
                     mydict.update({key: value})
             return mydict
 
