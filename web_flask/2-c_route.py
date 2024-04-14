@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """create a test server that displays hello hbnb and hbnb"""
 from flask import Flask
+from markupsafe import escape
 
 app = Flask(__name__)
 
@@ -25,7 +26,7 @@ def c(text):
     """display c with the text string"""
 
     text = text.replace("_", " ")
-    return f"c {text}"
+    return f"c {escape(text)}"
 
 
 if __name__ == "__main__":
