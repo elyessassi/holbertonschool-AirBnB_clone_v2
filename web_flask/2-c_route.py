@@ -24,8 +24,9 @@ def hbnb():
 def c(text):
     """display c with the text string"""
 
-    text = text.replace("_"," ")
+    text = text.replace("_", " ")
     return f"c {text}"
+
 
 if __name__ == "__main__":
     app.run()
