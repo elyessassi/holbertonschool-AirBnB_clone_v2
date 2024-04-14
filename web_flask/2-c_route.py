@@ -20,7 +20,7 @@ def hbnb():
     return "HBNB"
 
 
-@app.route("/c/<string:text>", strict_slashes=False)
+@app.route("/c/<text>", strict_slashes=False)
 def c(text):
     """display c with the text string"""
 
