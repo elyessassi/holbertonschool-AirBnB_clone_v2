@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def home():
-
     """page displays hello hbnb"""
 
     return "Hello HBNB!"
@@ -26,7 +25,7 @@ def c(text):
     """display c with the text string"""
 
     text = text.replace("_", " ")
-    return f"c {escape(text)}"
+    return f"C {escape(text)}"
 
 
 if __name__ == "__main__":
